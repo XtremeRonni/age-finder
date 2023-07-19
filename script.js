@@ -40,10 +40,14 @@ button.addEventListener('click', () => {
     if(!isNaN(input.value)) {
         output.innerText = `Is this your age? Enter properly`;
     } else {
-        createGif()
+        createGif();
+
+
         setTimeout(() => {
             getAge(input.value);
         }, 2000);
+
+        
         setTimeout(() => {
             thank();
         }, 2000);
