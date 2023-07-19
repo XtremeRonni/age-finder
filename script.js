@@ -1,6 +1,7 @@
 const input = document.getElementById('nameInput');
 const button = document.getElementById('btn');
 const output = document.getElementById('output');
+const outputDiv = document.getElementById('outputDiv');
 
 const url = `https://api.agify.io/?name=${name}`
 
@@ -12,10 +13,23 @@ const getAge = (name) => {
     })
 }
 
+function createGif() {
+    const gif = document.createElement('img');
+    gif.src = './images/gif.gif';
+    outputDiv.appendChild(gif);
+};
+
+function removeGif(gif) {
+    outputDiv.removeChild(gif);
+}
+
 button.addEventListener('click', () => {
     if(!isNaN(input.value)) {
         output.innerText = `Is this your age? Enter properly`;
     } else {
-        getAge(input.value);
+        removeGif(createGif())
+        setInterval(() => {
+            getAge(input.value);
+        }, 5000);
     }
 })
