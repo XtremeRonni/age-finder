@@ -11,6 +11,15 @@ body {
     color: #fff;
 }
 
+.guess, .thank {
+    width: 300px;
+    border-radius: 50px;
+    box-shadow:  0 10px 25px rgba(0, 0, 0, 0.5);
+}
+.output {
+    font-size: 1.5rem;
+}
+
 .container {
     display: flex;
     flex-direction: column;
