@@ -13,7 +13,7 @@ body {
 
 .guess, .thank {
     width: 300px;
-    border-radius: 50px;
+    border-radius: 50px;;;;;
     box-shadow:  0 10px 25px rgba(0, 0, 0, 0.5);
 }
 .output {
